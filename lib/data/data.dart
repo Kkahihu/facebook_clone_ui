@@ -1,4 +1,5 @@
 import 'package:facebook_clone_ui/models/models.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 final User currentUser = User(
   name: 'Kelvin Kahihu',

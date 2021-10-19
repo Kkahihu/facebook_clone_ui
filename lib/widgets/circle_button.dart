@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:facebook_clone_ui/models/models.dart';
 
 
 class CircleButton extends StatelessWidget {
@@ -7,7 +8,7 @@ class CircleButton extends StatelessWidget {
   final Function onPressed;
 
   const CircleButton({
-     Key key,
+     Key? key,
     required this.icon,
     required this.iconSize,
     required this.onPressed,
@@ -22,8 +23,8 @@ class CircleButton extends StatelessWidget {
         shape: BoxShape.circle,
       ),
       child: IconButton(
-        onPressed: onPressed,
         icon: Icon(icon),
+        onPressed: onPressed,
         iconSize: iconSize,
         color: Colors.black,
       ),

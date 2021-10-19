@@ -7,8 +7,8 @@ class CreatePostContainer extends StatelessWidget {
   final User currentUser;
 
   const CreatePostContainer({
-    Key? key
-    @required this.currentUser,
+    Key? key,
+    required this.currentUser,
   }) : super(key: key);
 
   @override
@@ -34,35 +34,38 @@ class CreatePostContainer extends StatelessWidget {
             ],
           ),
           const Divider(height: 10.0, thickness: 0.5,),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              TextButton.icon(onPressed: () => print('Live'),
-              icon: const Icon(
-                  Icons.videocam,
-                  color: Colors.red,
-              ),
-                label: Text('Live'),
-              ),
-              const VerticalDivider(width: 8.0),
-              TextButton.icon(
-                onPressed: () => print('Photo'),
+          Container(
+            height: 40.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                TextButton.icon(onPressed: () => print('Live'),
                 icon: const Icon(
-                  Icons.photo_library,
-                  color: Colors.red,
+                    Icons.videocam,
+                    color: Colors.red,
                 ),
-                label: Text('Photo'),
-              ),
-              const VerticalDivider(width: 8.0),
-              TextButton.icon(
-                onPressed: () => print('Room'),
-                icon: const Icon(
-                  Icons.video_call,
-                  color: Colors.red,
+                  label: Text('Live'),
                 ),
-                label: Text('Room'),  
-              ),
-            ],
+                const VerticalDivider(width: 8.0),
+                TextButton.icon(
+                  onPressed: () => print('Photo'),
+                  icon: const Icon(
+                    Icons.photo_library,
+                    color: Colors.red,
+                  ),
+                  label: Text('Photo'),
+                ),
+                const VerticalDivider(width: 8.0),
+                TextButton.icon(
+                  onPressed: () => print('Room'),
+                  icon: const Icon(
+                    Icons.video_call,
+                    color: Colors.red,
+                  ),
+                  label: Text('Room'),
+                ),
+              ],
+            ),
           ),
         ],
       ),
